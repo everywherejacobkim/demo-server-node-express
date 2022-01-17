@@ -6,6 +6,11 @@ app.listen(8080, function(){
     console.log('listening on 8080');
 }); 
 
-app.get('/main', function(req, res){
-    res.send("Hello! You are in Main Page");
+app.get('/pet', function(req, res){
+    res.send("Hello! This is page for shopping pet supplies.");
 });
+
+app.get('/beauty', function(req, res){
+    res.send("Hello! This is page for shopping beauty products.");
+});
+

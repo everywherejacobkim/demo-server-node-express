@@ -14,3 +14,6 @@ app.get('/beauty', function(req, res){
     res.send("Hello! This is page for shopping beauty products.");
 });
 
+app.get('/', function(req, res){
+    res.sendFile(__dirname + '/index.html');
+});

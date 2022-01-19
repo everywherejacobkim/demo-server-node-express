@@ -17,6 +17,14 @@ app.get('/animals/:type', (req, res)=>{
     res.send(`The type of animal you chose is ${req.params.type}`);
 })
 
-app.get('/:something', (req, res)=>{
-    res.send(`You are trying to access ${req.params.something}`);
+// app.get('/:something', (req, res)=>{
+//     res.send(`You are trying to access ${req.params.something}`);
+// })
+
+
+//URL query parameters
+// localhost:8081/colored-text?color=green
+app.get('/colored-text', (req, res)=>{
+    let color = req.query.color;
+    res.send(`<p style="color:${color}">The color you chose is ${color}</p>`)
 })
